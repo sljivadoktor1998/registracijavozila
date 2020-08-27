@@ -1,0 +1,466 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title> Registracija Vozila</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+  <!-- CSS here -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="assets/css/slicknav.css">
+  <link rel="stylesheet" href="assets/css/flaticon.css">
+  <link rel="stylesheet" href="assets/css/progressbar_barfiller.css">
+  <link rel="stylesheet" href="assets/css/gijgo.css">
+  <link rel="stylesheet" href="assets/css/animate.min.css">
+  <link rel="stylesheet" href="assets/css/animated-headline.css">
+  <link rel="stylesheet" href="assets/css/magnific-popup.css">
+  <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+  <link rel="stylesheet" href="assets/css/themify-icons.css">
+  <link rel="stylesheet" href="assets/css/slick.css">
+  <link rel="stylesheet" href="assets/css/nice-select.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<body>
+<!-- ? Preloader Start -->
+<div id="preloader-active">
+  <div class="preloader d-flex align-items-center justify-content-center">
+    <div class="preloader-inner position-relative">
+      <div class="preloader-circle"></div>
+      <div class="preloader-img pere-text">
+        <img src="assets/img/logo/loder.png" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Preloader end -->
+<header>
+
+  <div class="header-area header-transparent">
+    <div class="main-header header-sticky">
+      <div class="container-fluid">
+        <div class="menu-wrapper d-flex align-items-center justify-content-between">
+          <!-- Logo -->
+          <div class="logo">
+            <a href="/index"><img src="assets/img/logo/loder.png" alt=""></a>
+          </div>
+          <!-- Main-menu -->
+          <div class="main-menu f-right d-none d-lg-block">
+            <nav>
+              <ul id="navigation">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">O Nama</a></li>
+                <li><a href="#">Servisi</a>
+                  <ul class="submenu">
+                    <li><a href="/registracija_vozila">Registruj Vozilo</a></li>
+                    <li><a href="/najcesca_vozila">Najčeše registrovani modeli</a></li>
+                    <li><a href="/tabela_registrovanih_vozila">Tabela Registrovanih Vozila</a></li>
+                  </ul>
+                </li>
+                <li><a href="#help">Pomoć</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+              </ul>
+            </nav>
+          </div>
+          <!-- Header-btn -->
+          <div class="header-btns d-none d-lg-block f-right">
+            <a href="#" class="mr-40">+381 234 56 78</a>
+
+          </div>
+          <!-- Mobile Menu -->
+          <div class="col-12">
+            <div class="mobile_menu d-block d-lg-none"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+
+<main>
+  <!-- Header Start-->
+  <div class="slider-area d-none d-md-block  ">
+    <div class="single-slider slider-height d-flex align-items-center">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-xl-8 col-lg-9">
+            <!-- Header caption -->
+            <div class="hero__caption">
+
+              <img src="assets/img/logo/rvs-logo3.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Header kraj-->
+  <!--? Placanja -->
+  <section class="pricing-card-area">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="single-card d-flex justify-content-center mb-30 dugmence">
+            <form method="post" action="/provericenu">
+              <div class="form-group">
+                <label for="exampleFormControlInput1">Unesi Godište</label>
+                <input type="text" class="form-control py-4" id="exampleFormControlInput1"
+                       placeholder="Godište" name="godiste" value=<%=data.godiste%>>
+              </div>
+
+
+
+              <div class="form-group">
+                <label for="exampleFormControlInput1">Unesi Zapreminu Motora</label>
+                <input type="text" class="form-control py-4" id="exampleFormControlInput1"
+                       placeholder="Zapremina Motora" name="zapremina" value=<%=data.zapremina%>>
+              </div>
+
+
+
+
+              <button id="proveri" type="submit" class="btn p-4">Proveri</button>
+              <div class="mt-5">
+                <h2>Cena je: <%=cena.cena%></h2>
+                
+                <a href="/registracija_vozila?zapremina=<%=data.zapremina%>&godiste=<%=data.godiste%>" class="btn mt-3 p-4">Registruj</a>
+              </div>
+            </form>
+
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- kraj Placanja -->
+  <section  id="about" class="load-balancing  pt-top section-bg2" data-background="assets/img/gallery/section_bg01.png">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-xl-11 col-lg-11 col-md-10 ">
+          <!-- Section Tittle -->
+          <div class="section-tittle text-center mb-90">
+            <h2>Brza i pametna registracija</h2>
+            <p>Mi smo prva kompanija koja vam omogućava da registrujete Vaš auto uz samo par klika! Registrujte auto i preporučite svima da se prijave na naš sajt.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-4 col-lg-4 col-md-6">
+          <div class="single-features mb-40">
+            <div class="features-icon">
+              <img src="assets/img/gallery/right-icon.png" alt="">
+            </div>
+            <div class="features-caption">
+              <h3>Brza Registracija</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam iure nemo perferendis, reiciendis repellendus minima. Placeat assumenda voluptate eius magni itaque, dolorem, eos fuga facilis quas dignissimos natus, explicabo aperiam.</p>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6">
+          <div class="single-features mb-40">
+            <div class="features-icon">
+              <img src="assets/img/gallery/right-icon.png" alt="">
+            </div>
+            <div class="features-caption">
+              <h3>Brza Registracija</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam iure nemo perferendis, reiciendis repellendus minima. Placeat assumenda voluptate eius magni itaque, dolorem, eos fuga facilis quas dignissimos natus, explicabo aperiam.</p>
+            </div>
+          </div>
+
+        </div>
+        <div id="help" class="col-xl-4 col-lg-4 col-md-6">
+          <div class="single-features mb-40">
+            <div class="features-icon">
+              <img src="assets/img/gallery/right-icon.png" alt="">
+            </div>
+            <div class="features-caption">
+              <h3>Brza Registracija</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam iure nemo perferendis, reiciendis repellendus minima. Placeat assumenda voluptate eius magni itaque, dolorem, eos fuga facilis quas dignissimos natus, explicabo aperiam.</p>
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+  <!--? About -->
+  <!-- Support Centar -->
+  <section class="support-area section-bg2 pt-130 pb-130" data-background="assets/img/gallery/section_bg02.png">
+    <div class="container">
+      <div class="row align-items-center justify-content-between">
+        <div class="col-lg-5">
+          <div class="support-caption">
+            <!-- Sekcija -->
+            <div class="section-tittle section-tittle2">
+              <h2>24-časovna podrška <br>eksperta</h2>
+              <p class="support-details">Imamo najbolju podršku u državi koji su tu za vas 24/7</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="support-number">
+            <!-- contact -->
+            <div class="single-contact">
+              <div class="contact-icon">
+                <i class="fas fa-phone-volume"></i>
+              </div>
+              <div class="contact-number">
+                <span>+12 345 67 890</span>
+              </div>
+            </div>
+            <!-- contact -->
+            <div class="single-contact">
+              <div class="contact-icon">
+                <i class="fas fa-phone-volume"></i>
+              </div>
+              <div class="contact-number">
+                <span>+381 234 56 78</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Support centar -->
+  <!-- Mapa -->
+  <div id="contact" class="map-are section-padding40">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-xl-11 col-lg-11 col-md-10 ">
+          <!-- Section Tittle -->
+          <div class="section-tittle text-center mb-90">
+            <h2>Kontakt</h2>
+            <p>Mi se nalazimo u ulici Aleksandra Medvedeva 20 </p>
+          </div>
+        </div>
+      </div>
+      <div class="map">
+        <div class="row">
+          <div class="col-xl-12">
+            <iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Aleksandra%20Medvedeva%2020+(Registracija%20Vozila%20%C5%A0ljiva)&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--kraj  Mapa -->
+
+  <!-- pitanja -->
+  <section class="ask-questions section-bg2 section-padding30" data-background="assets/img/gallery/section_bg03.png">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-xl-11 col-lg-11 col-md-10 ">
+          <!-- Section Tittle -->
+          <div class="section-tittle section-tittle2 text-center mb-90">
+            <h2>Najčešće postavljena pitanja</h2>
+            <p>Umesto da zovete našu podršku, probajte da nađete odgovore na neka od pitanja koji naši klijenti najčešće postavljaju
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 col-md-6">
+          <div class="single-question d-flex mb-50">
+            <span> Q.</span>
+            <div class="pera">
+              <h2>Zašto baš Regristracija Vozila Šljiva?</h2>
+              <p>Mi smo najkvalitetnija i najjeftinija online kompanija koja pruža kvalitet i brzinu registracije našim klijentima. </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6">
+          <div class="single-question d-flex mb-50">
+            <span> Q.</span>
+            <div class="pera">
+              <h2>Zašto baš Regristracija Vozila Šljiva?</h2>
+              <p>Mi smo najkvalitetnija i najjeftinija online kompanija koja pruža kvalitet i brzinu registracije našim klijentima. </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6">
+          <div class="single-question d-flex mb-50">
+            <span> Q.</span>
+            <div class="pera">
+              <h2>Zašto baš Regristracija Vozila Šljiva?</h2>
+              <p>Mi smo najkvalitetnija i najjeftinija online kompanija koja pruža kvalitet i brzinu registracije našim klijentima. </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6">
+          <div class="single-question d-flex mb-50">
+            <span> Q.</span>
+            <div class="pera">
+              <h2>Zašto baš Regristracija Vozila Šljiva?</h2>
+              <p>Mi smo najkvalitetnija i najjeftinija online kompanija koja pruža kvalitet i brzinu registracije našim klijentima. </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- pitanja kraj -->
+
+  <!-- Online Podrska-->
+  <section class="wantToWork-area">
+    <div class="container">
+      <div class="wants-wrapper w-padding2">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-xl-6 col-lg-6 col-md-7">
+            <div class="wantToWork-caption wantToWork-caption2">
+              <h2>Potrebna Vam je pomoć?</h2>
+              <p>Pozovite našu online podršku koji su tu za Vas u svako doba!</p>
+            </div>
+          </div>
+          <div class="col-xl-6 col-lg-6 col-md-5 ">
+            <div class="double-btn f-right ">
+              <a href="#help" class="btn w-btn wantToWork-btn mr-20">Kontakt</a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Online Podrska-->
+</main>
+<footer>
+  <div class="footer-wrappr  section-bg" data-background="assets/img/gallery/footer_bg.png">
+    <div class="footer-area footer-padding ">
+      <div class="container">
+        <div class="row d-flex justify-content-between ml-5 ml-sm-1 pl-5 pl-sm-1">
+          <div class="col-xl-2 col-lg-2 col-md-4 col-sm-5">
+            <div class="single-footer-caption mb-50">
+              <div class="footer-tittle">
+                <div><h4>Zapratite Nas</h4></div>
+                <div class="footer-social mt-50">
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-2 col-lg-2 col-md-4 col-sm-5">
+            <div class="single-footer-caption mb-50">
+              <div class="footer-tittle">
+                <div><h4>Kontakt</h4></div>
+                <div>
+                  <ul>
+                    <li><p> Aleksandra Medvedeva 20</p></li>
+                    <li><p> 061 234 56 78</p></li>
+                    <li><p> marko@rvsljiva.rs</p></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5 ">
+            <div class="single-footer-caption mb-50">
+              <div class="footer-tittle">
+                <div><h4>Radno Vreme</h4></div>
+                <div class="">
+                  <ul>
+                    <li><p> Ponedeljak- Petak: 09h-17h </p></li>
+                    <li><p> Subota: 09-15h</p></li>
+                    <li><p class="text-danger"> Nedelja: Ne radimo</p></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+            <div class="single-footer-caption mb-50">
+              <!-- logo -->
+              <div class="footer-logo mb-25">
+                <a href="/index"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
+              </div>
+              <div class="footer-tittle mb-50">
+                <p>Hvala što verujete u nas!</p>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- footer-bottom area -->
+    <div class="footer-bottom-area">
+      <div class="container">
+        <div class="footer-border">
+          <div class="row">
+            <div class="col-xl-10 ">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- Scroll -->
+<div id="back-top" >
+  <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+</div>
+
+<!-- JS-->
+
+
+<script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+<!-- Jquery, Popper, Bootstrap -->
+<script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+<script src="./assets/js/popper.min.js"></script>
+<script src="./assets/js/bootstrap.min.js"></script>
+<!-- Jquery Mobile Menu -->
+<script src="./assets/js/jquery.slicknav.min.js"></script>
+
+<!-- Jquery Slick , Owl-Carousel Plugins -->
+<script src="./assets/js/owl.carousel.min.js"></script>
+<script src="./assets/js/slick.min.js"></script>
+<!-- One Page, Animated-HeadLin -->
+<script src="./assets/js/wow.min.js"></script>
+<script src="./assets/js/animated.headline.js"></script>
+<script src="./assets/js/jquery.magnific-popup.js"></script>
+
+<!-- Date Picker -->
+<script src="./assets/js/gijgo.min.js"></script>
+<!-- Nice-select, sticky -->
+<script src="./assets/js/jquery.nice-select.min.js"></script>
+<script src="./assets/js/jquery.sticky.js"></script>
+<!-- Progress -->
+<script src="./assets/js/jquery.barfiller.js"></script>
+
+<!-- counter , waypoint,Hover Direction -->
+<script src="./assets/js/jquery.counterup.min.js"></script>
+<script src="./assets/js/waypoints.min.js"></script>
+<script src="./assets/js/jquery.countdown.min.js"></script>
+<script src="./assets/js/hover-direction-snake.min.js"></script>
+
+<!-- contact js -->
+<script src="./assets/js/contact.js"></script>
+<script src="./assets/js/jquery.form.js"></script>
+<script src="./assets/js/jquery.validate.min.js"></script>
+<script src="./assets/js/mail-script.js"></script>
+<script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+
+<!-- Jquery Plugins, main Jquery -->
+<script src="./assets/js/plugins.js"></script>
+<script src="./assets/js/main.js"></script>
+
+</body>
+</html>
